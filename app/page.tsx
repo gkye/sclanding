@@ -7,6 +7,8 @@ function getBasePathPrefix(): string {
   return basePath ? "/" + basePath : "/";
 }
 
+console.log(getBasePathPrefix() + "/screenshot1.png?height=800&width=600")
+
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
@@ -101,8 +103,8 @@ export default function LandingPage() {
                 <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[280px] overflow-hidden">
                   <div className="absolute inset-0"></div>
                   <Image
-                    // src={ getBasePathPrefix() + "/screenshot1.png?height=800&width=600" }
-                    src="/SCLanding/screenshot1.png?height=800&width=600"
+                    src={ getBasePathPrefix() + "/screenshot1.png?height=800&width=600" }
+                    // src="/SCLanding/screenshot1.png?height=800&width=600"
                     alt="App screenshot"
                     fill
                     className="object-cover"
