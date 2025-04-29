@@ -18,7 +18,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <Image 
-                src="/SCLanding/icon.svg"
+                src="/icon.svg"
                 alt="ShutterCraft Icon"
                 width={32}
                 height={32}
@@ -46,7 +46,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <Link href="#download">
                <Image
-                  src="/SCLanding/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=40&width=200"
+                  src="/sclanding/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=40&width=200"
                   // src="/placeholder.svg?height=60&width=200"
                   alt="Download on the App Store"
                   width={200}
@@ -65,7 +65,7 @@ export default function LandingPage() {
         <section className="w-full py-4 md:py-8 lg:py-12 xl:py-16 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/SCLanding/grain.jpg?height=1080&width=1920"
+              src="/sclanding/grain.jpg?height=1080&width=1920"
               alt="Background"
               fill
               className="object-cover opacity-20"
@@ -116,7 +116,7 @@ export default function LandingPage() {
             <div className="mt-10 flex justify-center">
               <Link href="#download" className="inline-flex items-center justify-center">
                 <Image
-                  src="/SCLanding/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200"
+                  src="/sclanding/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200"
                   // src="/placeholder.svg?height=60&width=200"
                   alt="Download on the App Store"
                   width={200}
@@ -351,7 +351,7 @@ export default function LandingPage() {
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <div className="flex items-center gap-2">
             <Image
-              src="/SCLanding/icon.svg"
+              src="/sclanding/icon.svg"
               alt="ShutterCraft Icon"
               width={24}
               height={24}
