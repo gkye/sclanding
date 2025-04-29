@@ -8,7 +8,6 @@ const basePath = isGithubActions ? `/${repo}` : ''
 const nextConfig = {
   output: 'export', // Required for static export to GitHub Pages
   assetPrefix: assetPrefix,
-  basePath: basePath,
   images: {
     // If using static export, default image optimization might not work.
     // You might need to set unoptimized: true
