@@ -1,26 +1,17 @@
 /** @type {import('next').NextConfig} */
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
-
-const repo = 'sclanding' // Your repository name
-const assetPrefix = isGithubActions ? `/${repo}/` : '/'
-const basePath = isGithubActions ? `/${repo}` : ''
 
 const nextConfig = {
-  output: 'export', // Required for static export to GitHub Pages
-  assetPrefix: assetPrefix,
-  images: {
-    // If using static export, default image optimization might not work.
-    // You might need to set unoptimized: true
-    unoptimized: true,
-  },
+  reactStrictMode: true,
+  // NOTE: `redirects` don't work with `output: 'export'`
+  // Docs: https://nextjs.org/docs/app/building-your-application/routing/redirecting#redirects-in-nextconfigjs
+  // Docs: https://nextjs.org/docs/app/api-reference/next-config-js/redirects
+
+  // Deploy to Github Pages
+  // Docs: https://github.com/gregrickaby/nextjs-github-pages?tab=readme-ov-file#nextjs-config
+  output: 'export',
+  images: { unoptimized: true },
 }
-// if (!!process.env.PAGES_BASE_PATH && process.env.PAGES_BASE_PATH.length) {
-// 		console.warn('Assuming deployment to GitHub Pages', process.env.PAGES_BASE_PATH);
-//     nextConfig.output = 'export';
-//     nextConfig.basePath = process.env.PAGES_BASE_PATH;
-// 	} else {
-//     console.warn('Regular deployments deployment to GitHub Pages', process.env.PAGES_BASE_PATH);
-//   }
+
 
 export default nextConfig
 
