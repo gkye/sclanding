@@ -2,6 +2,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { Circle, CalendarClock, Move, ScanSearch, Palette, Grid, Film, AlertTriangle } from "lucide-react"
 
+function getBasePathPrefix(): string {
+  const basePath = process.env.PAGES_BASE_PATH;
+  return basePath ? `/${basePath}` : "";
+}
+
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
@@ -39,7 +44,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <Link href="#download">
                <Image
-                  src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=40&width=200"
+                  src="/SCLanding/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=40&width=200"
                   // src="/placeholder.svg?height=60&width=200"
                   alt="Download on the App Store"
                   width={200}
@@ -96,7 +101,7 @@ export default function LandingPage() {
                 <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[280px] overflow-hidden">
                   <div className="absolute inset-0"></div>
                   <Image
-                    src="screenshot1.png?height=800&width=600"
+                    src={ getBasePathPrefix() + "/screenshot1.png?height=800&width=600" }
                     alt="App screenshot"
                     fill
                     className="object-cover"
