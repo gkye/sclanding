@@ -30,3 +30,16 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Add tilt animation keyframes */
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-tilt-shaking {
+  animation: tilt-shaking 10s ease-in-out infinite;
+}
