@@ -4,7 +4,7 @@ import { Circle, CalendarClock, Move, ScanSearch, Palette, Grid, Film, AlertTria
 
 function getBasePathPrefix(): string {
   const basePath = process.env.PAGES_BASE_PATH;
-  return basePath ? `/${basePath}` : "";
+  return basePath ? "/" + basePath : "/";
 }
 
 export default function LandingPage() {
@@ -16,7 +16,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <Image 
-                src="/icon.svg"
+                src="/SCLanding/icon.svg"
                 alt="ShutterCraft Icon"
                 width={32}
                 height={32}
@@ -101,7 +101,8 @@ export default function LandingPage() {
                 <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[280px] overflow-hidden">
                   <div className="absolute inset-0"></div>
                   <Image
-                    src={  getBasePathPrefix() + "/screenshot1.png?height=800&width=600" }
+                    src={ getBasePathPrefix() + "/screenshot1.png?height=800&width=600" }
+                    // src="/SCLanding/screenshot1.png?height=800&width=600"
                     alt="App screenshot"
                     fill
                     className="object-cover"
@@ -113,7 +114,7 @@ export default function LandingPage() {
             <div className="mt-10 flex justify-center">
               <Link href="#download" className="inline-flex items-center justify-center">
                 <Image
-                  src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200"
+                  src="/SCLanding/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200"
                   // src="/placeholder.svg?height=60&width=200"
                   alt="Download on the App Store"
                   width={200}
