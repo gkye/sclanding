@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   generator: 'Shutter Craft Generator',
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.png', type: 'image/png' },
+      { url: '/sclanding/favicon.ico' },
+      { url: '/sclanding/icon.png', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-icon.png' },
+      { url: '/sclanding/apple-icon.png' },
     ],
   }
 }

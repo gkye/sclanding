@@ -4,10 +4,8 @@ import { Circle, CalendarClock, Move, ScanSearch, Palette, Grid, Film, AlertTria
 
 function getBasePathPrefix(): string {
   const basePath = process.env.PAGES_BASE_PATH;
-  return basePath ? "/" + basePath : "/";
+  return basePath ? "/sclanding" : "/";
 }
-
-console.log(getBasePathPrefix() + "/screenshot1.png?height=800&width=600")
 
 export default function LandingPage() {
   return (
@@ -18,7 +16,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <Image 
-                src="/icon.svg"
+                src="/sclanding/icon.svg"
                 alt="ShutterCraft Icon"
                 width={32}
                 height={32}
@@ -103,8 +101,8 @@ export default function LandingPage() {
                 <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[280px] overflow-hidden">
                   <div className="absolute inset-0"></div>
                   <Image
-                    src={ getBasePathPrefix() + "/screenshot1.png?height=800&width=600" }
-                    // src="/SCLanding/screenshot1.png?height=800&width=600"
+                    // src={ getBasePathPrefix() + "/screenshot1.png?height=800&width=600" }
+                    src="/sclanding/screenshot1.png?height=800&width=600"
                     alt="App screenshot"
                     fill
                     className="object-cover"
