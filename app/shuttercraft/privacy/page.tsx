@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
         <div className="container flex h-16 items-center">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/shuttercraft" className="flex items-center gap-2">
             <Image 
               src="/icon.svg"
               alt="ShutterCraft Icon"
