@@ -1,8 +1,43 @@
 import Link from "next/link"
-import Image from "next/image"
-import { Circle, CalendarClock, Move, ScanSearch, Palette, Grid, Film, AlertTriangle } from "lucide-react"
-import AppShowcaseCard from "./app-showcase-card"
 import ManifestoCard from "./app-showcase-card"
+import type { Metadata } from 'next'
+
+const description = 'Plan, create, and record professional-quality video on your iPhone with ShutterCraft. Features timeline planning, stabilization, focus peaking, LUTs, and more.'
+
+export const metadata: Metadata = {
+  title: 'Lauper Labs',
+  description: description,
+  generator: 'Lauper Site',
+  icons: {
+    icon: [
+      { url: '/favicon_lauper.ico' },
+      { url: '/favicon_lauper.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon_lauper.png' },
+    ],
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/favicon_lauper.png',
+    },
+  },
+  
+   openGraph: {
+    title: 'Lauper Labs',
+    description: description,
+    url: 'https://lauperlabs.com',
+    siteName: 'Lauper Labs',
+    locale: 'en_US',
+    type: 'website',
+  },
+  // Add Twitter card tags
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lauper Labs.',
+    description: description,
+  },
+}
+
 
 export default function LandingPage() {
   return (
