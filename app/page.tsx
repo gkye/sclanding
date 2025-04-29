@@ -96,7 +96,7 @@ export default function LandingPage() {
                 <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[280px] overflow-hidden">
                   <div className="absolute inset-0"></div>
                   <Image
-                    src="./screenshot1.png?height=800&width=600"
+                    src="screenshot1.png?height=800&width=600"
                     alt="App screenshot"
                     fill
                     className="object-cover"
