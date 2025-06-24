@@ -2,7 +2,7 @@ import Link from "next/link"
 import ManifestoCard from "./app-showcase-card"
 import type { Metadata } from 'next'
 
-const description = 'Plan, create, and record professional-quality video on your iPhone with ShutterCraft. Features timeline planning, stabilization, focus peaking, LUTs, and more.'
+const description = 'We make apps.'
 
 export const metadata: Metadata = {
   title: 'Lauper Labs',
@@ -61,15 +61,15 @@ export default function LandingPage() {
           </Link>
 
           <nav className="hidden md:flex gap-8">
-            <Link href="/shuttercraft" className="text-lg font-bold text-white/120 hover:text-white">
-              Download ShutterCraft
+            <Link href="/shotcal" className="text-lg font-bold text-white/120 hover:text-white">
+              Download ShotCal
             </Link>
           </nav>
         </div>
       </header>
 
       <main className="flex-1 flex items-center justify-center container py-12">
-        <Link href="/shuttercraft" className="hover:text-red">
+        <Link href="/shotcal" className="hover:text-red">
          <ManifestoCard />
         </Link>
       </main>
