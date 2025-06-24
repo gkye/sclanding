@@ -4,33 +4,73 @@ import { Circle, Brain, Camera, Upload, FolderOpen, Sparkles, Calendar, MapPin, 
 import type { Metadata } from 'next'
 import AnimatedHero from './components/AnimatedHero'
 
-const description = 'Smart event suggestions from screenshots and text. Organize your memories with AI-powered collections and intelligent scheduling.'
+const description = 'Transform any screenshot into calendar events instantly. Smart AI-powered event planning app that extracts event details from screenshots, flyers, and text to create perfect calendar entries.'
 
 export const metadata: Metadata = {
-  title: 'ShotCal - Smart Event Planning',
+  metadataBase: new URL('https://lauperlabs.com'),
+  title: 'ShotCal - Transform Screenshots into Calendar Events Instantly',
   description: description,
-  generator: 'ShotCal Generator',
+  keywords: ['screenshot to calendar', 'event planning app', 'AI calendar', 'smart scheduling', 'event extraction', 'calendar automation', 'iOS app', 'event management'],
+  authors: [{ name: 'Lauper Labs' }],
+  creator: 'Lauper Labs',
+  publisher: 'Lauper Labs',
+  applicationName: 'ShotCal',
+  generator: 'ShotCal',
+  category: 'Productivity',
+  classification: 'Productivity App',
   icons: {
     icon: [
-      { url: '/favicon_shotcal.ico' },
+      { url: '/favicon_shot_cal.ico' },
       { url: '/favicon_shotcal.png', type: 'image/png' },
     ],
     apple: [
       { url: '/favicon_shotcal.png' },
     ],
   },
-   openGraph: {
-    title: 'ShotCal - Smart Event Planning from Screenshots',
+  openGraph: {
+    title: 'ShotCal - Transform Screenshots into Calendar Events Instantly',
     description: description,
-    url: 'https://lauperlabs.com',
+    url: 'https://lauperlabs.com/shotcal',
     siteName: 'ShotCal',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/shotCal_screenshot.png',
+        width: 600,
+        height: 800,
+        alt: 'ShotCal App Screenshot - Transform screenshots into calendar events',
+      },
+      {
+        url: '/shot_cal_app_icon.png',
+        width: 512,
+        height: 512,
+        alt: 'ShotCal App Icon',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ShotCal - Smart Event Planning from Screenshots',
+    title: 'ShotCal - Transform Screenshots into Calendar Events Instantly',
     description: description,
+    images: ['/shotCal_screenshot.png'],
+    creator: '@lauperlabs',
+    site: '@lauperlabs',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
   },
 }
 
@@ -43,7 +83,7 @@ export default function ShotCalLandingPage() {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <Image 
-                src="/icon.svg"
+                src="/shot_cal_app_icon.png"
                 alt="ShotCal Icon"
                 width={32}
                 height={32}
@@ -95,7 +135,7 @@ export default function ShotCalLandingPage() {
                 <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[280px] overflow-hidden">
                   <div className="absolute inset-0"></div>
                   <Image
-                    src="/screenshot1.png?height=800&width=600"
+                    src="/shotCal_screenshot.png?height=800&width=600"
                     alt="App screenshot"
                     fill
                     className="object-cover"
@@ -201,7 +241,7 @@ export default function ShotCalLandingPage() {
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <div className="flex items-center gap-2">
             <Image
-              src="/icon.svg"
+              src="/shot_cal_app_icon.png"
               alt="ShotCal Icon"
               width={24}
               height={24}

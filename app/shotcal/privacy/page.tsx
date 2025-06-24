@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/shotcal" className="flex items-center gap-2">
             <Image 
-              src="/icon.svg"
+              src="/shot_cal_app_icon.png"
               alt="ShotCal Icon"
               width={32}
               height={32}
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-2">
             <Image
-              src="/icon.svg"
+              src="/shot_cal_app_icon.png"
               alt="ShotCal Icon"
               width={24}
               height={24}
