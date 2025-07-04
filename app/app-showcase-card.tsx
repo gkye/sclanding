@@ -22,7 +22,7 @@ export default function ManifestoCard() {
             alt="ShotCal App Icon"
             layout="fill"
             objectFit="contain"
-            className="drop-shadow-lg"
+            className="drop-shadow-lg rounded-2xl"
           />
         </div>
       </div>

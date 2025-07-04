@@ -19,7 +19,7 @@ export default function TermsPage() {
               alt="ShotCal Icon"
               width={32}
               height={32}
-              className="h-8 w-8"
+              className="h-8 w-8 rounded-lg"
             />
             <span className="text-xl font-bold">ShotCal</span>
           </Link>
@@ -153,7 +153,7 @@ export default function TermsPage() {
               alt="ShotCal Icon"
               width={24}
               height={24}
-              className="h-6 w-6"
+              className="h-6 w-6 rounded-md"
             />
             <p className="text-sm font-medium">© {new Date().getFullYear()} ShotCal. All rights reserved.</p>
           </div>
