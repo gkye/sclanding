@@ -97,7 +97,7 @@ export default function ShotCalLandingPage() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Link href="#download">
+            <Link href="https://apps.apple.com/us/app/shotcal-screenshot-to-event/id6747011235">
                <Image
                   src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=40&width=200"
                   alt="Download on the App Store"
@@ -145,7 +145,7 @@ export default function ShotCalLandingPage() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <Link href="#download" className="inline-flex items-center justify-center">
+              <Link href="https://apps.apple.com/us/app/shotcal-screenshot-to-event/id6747011235" className="inline-flex items-center justify-center">
                 <Image
                   src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200"
                   alt="Download on the App Store"
