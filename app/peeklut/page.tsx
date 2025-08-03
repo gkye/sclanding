@@ -148,17 +148,22 @@ export default function PeekLUTLandingPage() {
                 {
                   title: 'Apply and combine multiple LUTs',
                   desc: 'Layer creative and technical LUTs with live preview. Build complex looks and tweak each layer non‑destructively.',
-                  image: '/peeklut_before.jpeg',
+                  image: '/promo_luts.png',
                 },
                 {
                   title: 'Export filters to LUT',
                   desc: 'Turn your final look into a reusable .cube LUT to share or use in desktop editors like DaVinci Resolve.',
-                  image: '/peek_lut_after.jpeg',
+                  image: '/promo_export_filter_as_lut copy.png',
                 },
                 {
                   title: 'Masks and precise adjustments',
                   desc: 'Target regions with shape and feather controls. Adjust exposure, contrast, temperature, hue, saturation, and more.',
-                  image: '/peeklut_before.jpeg',
+                  image: '/promo_masks_linear.png',
+                },
+                {
+                  title: 'Halation and film effects',
+                  desc: 'Add authentic halation bloom effects and vintage film characteristics to give your footage that classic analog look.',
+                  image: '/promo_halation.png',
                 },
                 {
                   title: 'Film grain and photo/video support',
@@ -169,8 +174,8 @@ export default function PeekLUTLandingPage() {
                 <div key={idx} className={`grid items-center gap-6 md:grid-cols-2 ${idx % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}>
                   {/* Media */}
                   <div className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-4 ring-1 ring-white/10">
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-                      <Image src={f.image} alt="Feature preview" fill className="object-cover" />
+                    <div className="relative w-full overflow-hidden rounded-xl">
+                      <Image src={f.image} alt="Feature preview" width={400} height={300} className="w-full h-auto object-contain" />
                     </div>
                   </div>
 
