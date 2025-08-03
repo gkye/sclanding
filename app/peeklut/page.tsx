@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Eye, Palette, Zap, Download, Share, Smartphone } from "lucide-react"
+import { Eye, Palette, Zap, Download, Share, Smartphone, ArrowRight } from "lucide-react"
 import type { Metadata } from 'next'
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider"
 import PeeklutCarousel from "@/components/PeeklutCarousel"
@@ -186,6 +186,77 @@ export default function PeekLUTLandingPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Features Bullet Points */}
+        <section className="w-full py-12 md:py-16 bg-white/[0.02] border-t border-white/10">
+          <div className="container px-4 md:px-6">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="text-2xl font-bold tracking-tight md:text-3xl text-center mb-8">Everything you need for professional color grading</h2>
+              
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mt-1">
+                    <Palette className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Real-Time Preview</h3>
+                    <p className="text-sm text-white/70">See changes instantly as you apply LUTs and adjustments for efficient editing</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mt-1">
+                    <Download className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Import Custom LUTs</h3>
+                    <p className="text-sm text-white/70">Support for DaVinci Resolve 3D Cube LUTs and haldclut image tables</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mt-1">
+                    <Zap className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Fast & User-Friendly</h3>
+                    <p className="text-sm text-white/70">Designed for both beginners and pros with intuitive interface</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mt-1">
+                    <Eye className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Precision Color Grading</h3>
+                    <p className="text-sm text-white/70">Control highlights, shadows, and midtones with professional tools</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mt-1">
+                    <Smartphone className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Photo & Video Ready</h3>
+                    <p className="text-sm text-white/70">Apply effects to both photos and videos for cohesive visual identity</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mt-1">
+                    <Share className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Easy Export & Share</h3>
+                    <p className="text-sm text-white/70">Export your creations and share directly to social media</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
