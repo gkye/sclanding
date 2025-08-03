@@ -64,14 +64,15 @@ export default function LandingPage() {
             <Link href="/shotcal" className="text-lg font-bold text-white/120 hover:text-white">
               Download ShotCal
             </Link>
+            <Link href="/peeklut" className="text-lg font-bold text-white/120 hover:text-white">
+              Download PeekLUT
+            </Link>
           </nav>
         </div>
       </header>
 
       <main className="flex-1 flex items-center justify-center container py-12">
-        <Link href="/shotcal" className="hover:text-red">
-         <ManifestoCard />
-        </Link>
+        <ManifestoCard />
       </main>
     </div>
   )
