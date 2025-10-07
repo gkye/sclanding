@@ -1,61 +1,76 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Circle, Brain, Camera, Upload, FolderOpen, Sparkles, Calendar, MapPin, Clock } from "lucide-react"
-import type { Metadata } from 'next'
-import AnimatedHero from './components/AnimatedHero'
+import { Brain, Camera, Upload, FolderOpen, Sparkles, Calendar, MapPin } from "lucide-react"
+import type { Metadata } from "next"
+import AnimatedHero from "./components/AnimatedHero"
 
-const description = 'Transform any screenshot into calendar events instantly. Smart AI-powered event planning app that extracts event details from screenshots, flyers, and text to create perfect calendar entries.'
+const description =
+  "ShotCal is the AI screenshot-to-calendar app for iPhone that extracts dates, times, and locations from invites, flyers, and texts to build perfect events in seconds."
+const appStoreUrl = "https://apps.apple.com/us/app/shotcal-screenshot-to-event/id6747011235"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lauperlabs.com'),
-  title: 'ShotCal - Transform Screenshots into Calendar Events Instantly',
-  description: description,
-  keywords: ['screenshot to calendar', 'event planning app', 'AI calendar', 'smart scheduling', 'event extraction', 'calendar automation', 'iOS app', 'event management'],
-  authors: [{ name: 'Lauper Labs' }],
-  creator: 'Lauper Labs',
-  publisher: 'Lauper Labs',
-  applicationName: 'ShotCal',
-  generator: 'ShotCal',
-  category: 'Productivity',
-  classification: 'Productivity App',
+  metadataBase: new URL("https://lauperlabs.com"),
+  title: "ShotCal - Transform Screenshots into Calendar Events Instantly",
+  description,
+  keywords: [
+    "screenshot to calendar",
+    "shotcal app",
+    "ai calendar assistant",
+    "event planning app",
+    "calendar automation",
+    "iphone productivity app",
+    "event extraction",
+    "smart scheduling",
+    "calendar app for students",
+  ],
+  alternates: {
+    canonical: "https://lauperlabs.com/shotcal",
+  },
+  authors: [{ name: "Lauper Labs" }],
+  creator: "Lauper Labs",
+  publisher: "Lauper Labs",
+  applicationName: "ShotCal",
+  generator: "ShotCal",
+  category: "Productivity",
+  classification: "Productivity App",
   icons: {
     icon: [
-      { url: '/favicon_shot_cal.ico' },
-      { url: '/favicon_shotcal.png', type: 'image/png' },
+      { url: "/favicon_shot_cal.ico" },
+      { url: "/favicon_shotcal.png", type: "image/png" },
     ],
     apple: [
-      { url: '/favicon_shotcal.png' },
+      { url: "/favicon_shotcal.png" },
     ],
   },
   openGraph: {
-    title: 'ShotCal - Transform Screenshots into Calendar Events Instantly',
-    description: description,
-    url: 'https://lauperlabs.com/shotcal',
-    siteName: 'ShotCal',
-    locale: 'en_US',
-    type: 'website',
+    title: "ShotCal - Transform Screenshots into Calendar Events Instantly",
+    description,
+    url: "https://lauperlabs.com/shotcal",
+    siteName: "ShotCal",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: '/shotCal_screenshot.png',
+        url: "/shotCal_screenshot.png",
         width: 600,
         height: 800,
-        alt: 'ShotCal App Screenshot - Transform screenshots into calendar events',
+        alt: "ShotCal App Screenshot - Transform screenshots into calendar events",
       },
       {
-        url: '/shot_cal_app_icon.png',
+        url: "/shot_cal_app_icon.png",
         width: 512,
         height: 512,
-        alt: 'ShotCal App Icon',
+        alt: "ShotCal App Icon",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'ShotCal - Transform Screenshots into Calendar Events Instantly',
-    description: description,
-    images: ['/shotCal_screenshot.png'],
-    creator: '@lauperlabs',
-    site: '@lauperlabs',
+    card: "summary_large_image",
+    title: "ShotCal - Transform Screenshots into Calendar Events Instantly",
+    description,
+    images: ["/shotCal_screenshot.png"],
+    creator: "@lauperlabs",
+    site: "@lauperlabs",
   },
   robots: {
     index: true,
@@ -68,15 +83,88 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
+  appLinks: {
+    ios: {
+      url: appStoreUrl,
+      app_store_id: "6747011235",
+    },
   },
 }
 
 export default function ShotCalLandingPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    name: "ShotCal",
+    description,
+    applicationCategory: "https://schema.org/ProductivityApplication",
+    operatingSystem: "iOS 17 or later",
+    browserRequirements: "Requires iPhone",
+    url: "https://lauperlabs.com/shotcal",
+    downloadUrl: appStoreUrl,
+    image: "https://lauperlabs.com/shotCal_screenshot.png",
+    offers: {
+      "@type": "Offer",
+      price: "0.00",
+      priceCurrency: "USD",
+    },
+    inLanguage: "en-US",
+    featureList: [
+      "Turn screenshots into calendar events without typing",
+      "Extracts dates, times, locations, and event names with AI",
+      "Works with Apple Calendar, Google Calendar, and Outlook",
+      "Organize saved events with custom collections",
+      "Privacy-first: processing happens on-device",
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "Lauper Labs",
+      url: "https://lauperlabs.com",
+      logo: "https://lauperlabs.com/shot_cal_app_icon.png",
+    },
+  }
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How does ShotCal turn a screenshot into a calendar event?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ShotCal uses on-device AI to read the important details in your screenshot - like date, time, location, and event name - and automatically builds a complete calendar entry in a few seconds.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which calendars does ShotCal work with?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ShotCal sends new events to Apple Calendar by default and can share the same event details to Google Calendar, Outlook, and other apps you use to manage your schedule.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is my data private when I use ShotCal?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Screenshots never leave your device. ShotCal extracts the event information locally so your data stays private and secure.",
+        },
+      },
+    ],
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
         <div className="container flex h-16 items-center justify-between">
@@ -97,7 +185,7 @@ export default function ShotCalLandingPage() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Link href="https://apps.apple.com/us/app/shotcal-screenshot-to-event/id6747011235">
+            <Link href={appStoreUrl}>
                <Image
                   src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=40&width=200"
                   alt="Download on the App Store"
@@ -145,7 +233,7 @@ export default function ShotCalLandingPage() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <Link href="https://apps.apple.com/us/app/shotcal-screenshot-to-event/id6747011235" className="inline-flex items-center justify-center">
+              <Link href={appStoreUrl} className="inline-flex items-center justify-center">
                 <Image
                   src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200"
                   alt="Download on the App Store"
@@ -158,11 +246,54 @@ export default function ShotCalLandingPage() {
 
           </div>
         </section>
+
+        {/* Social proof */}
+        <section className="w-full border-t border-white/10 bg-black/60 py-10 md:py-16">
+          <div className="container px-4 md:px-6">
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">The fastest way to capture every invite</h2>
+              <p className="mt-4 text-lg text-white/70">
+                Students, creatives, and busy teams use ShotCal to collect basketball practice times, concert flyers, office meetings, and
+                family events without copying a single detail by hand.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-left">
+                <Sparkles className="mb-4 h-8 w-8 text-red-400" />
+                <p className="font-semibold">3x faster scheduling</p>
+                <p className="mt-2 text-sm text-white/70">
+                  Create finished calendar events in seconds by letting ShotCal highlight the important information automatically.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-left">
+                <Calendar className="mb-4 h-8 w-8 text-blue-400" />
+                <p className="font-semibold">Works with every calendar</p>
+                <p className="mt-2 text-sm text-white/70">
+                  Add events directly to Apple Calendar and send them to Google Calendar, Outlook, or shared calendars you collaborate on.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-left">
+                <MapPin className="mb-4 h-8 w-8 text-green-400" />
+                <p className="font-semibold">Never miss a location</p>
+                <p className="mt-2 text-sm text-white/70">
+                  Addresses and meeting links are parsed precisely so you show up at the right place on time every time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         
 
         {/* Features Section */}
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 border-t border-white/10">
           <div className="container px-4 md:px-6">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Why ShotCal stands out</h2>
+              <p className="mt-4 text-lg text-white/70">
+                Built for the moments when you spot an event and need it saved immediately, ShotCal combines computer vision and language
+                models to remove the friction from staying organized.
+              </p>
+            </div>
             <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2">
               {/* Feature 1: Instant Screenshot-to-Calendar Conversion */}
               <div className="space-y-4">
@@ -171,7 +302,8 @@ export default function ShotCalLandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold">Instant Screenshot-to-Calendar Conversion</h3>
                 <p className="text-white/70">
-                  Simply screenshot any event flyer, poster, email, or message and SeeSave automatically extracts the title, date, time, and location to create a complete calendar event in seconds.
+                  Simply screenshot any event flyer, poster, email, or message and ShotCal automatically extracts the title, date, time, and
+                  location to create a complete calendar event in seconds.
                 </p>
               </div>
 
@@ -182,7 +314,8 @@ export default function ShotCalLandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold">Smart AI Event Detection</h3>
                 <p className="text-white/70">
-                  Advanced text recognition intelligently identifies and organizes event details from any image or copied text, eliminating the need to manually type event information ever again.
+                  Advanced text recognition intelligently identifies and organizes event details from any image or copied text, eliminating
+                  the need to manually type event information ever again.
                 </p>
               </div>
 
@@ -193,7 +326,8 @@ export default function ShotCalLandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold">Universal Calendar Integration</h3>
                 <p className="text-white/70">
-                  Seamlessly add events to Apple Calendar, Google Calendar, or Outlook with one tap, supporting all major calendar platforms you already use.
+                  Seamlessly add events to Apple Calendar, Google Calendar, or Outlook with one tap, supporting all major calendar platforms
+                  you already use.
                 </p>
               </div>
 
@@ -204,7 +338,7 @@ export default function ShotCalLandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold">Complete Privacy Protection</h3>
                 <p className="text-white/70">
-                  All data is saved locally on your device and never shared with anyone.
+                  All data is saved locally on your device and never shared with anyone, keeping your screenshots private and secure.
                 </p>
               </div>
 
@@ -215,7 +349,8 @@ export default function ShotCalLandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold">Custom Event Collections</h3>
                 <p className="text-white/70">
-                  Organize your events into personalized categories like "Concerts," "Work Meetings," or "Family Events" to keep your schedule perfectly structured.
+                  Organize your events into personalized categories like "Concerts," "Work Meetings," or "Family Events" to keep your
+                  schedule perfectly structured.
                 </p>
               </div>
 
@@ -226,14 +361,130 @@ export default function ShotCalLandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold">Text-to-Event Magic</h3>
                 <p className="text-white/70">
-                  Paste any text containing event details and watch SeeSave instantly transform it into a properly formatted calendar entry with all relevant information extracted.
+                  Paste any text containing event details and watch ShotCal instantly transform it into a properly formatted calendar entry
+                  with all relevant information extracted.
                 </p>
               </div>
-
             </div>
           </div>
         </section>
 
+        {/* How it works */}
+        <section className="w-full border-t border-white/10 bg-black/60 py-12 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">From screenshot to schedule in three steps</h2>
+              <p className="mt-4 text-lg text-white/70">
+                Capture the event, review the auto-filled fields, and save it to the calendar that keeps you organized.
+              </p>
+            </div>
+            <div className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-xl font-bold">1</div>
+                <h3 className="mt-4 text-xl font-semibold">Snap or import</h3>
+                <p className="mt-2 text-sm text-white/70">
+                  Take a screenshot or pull one from your camera roll, including emails, texts, flyers, or social posts.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-xl font-bold">2</div>
+                <h3 className="mt-4 text-xl font-semibold">Let ShotCal read it</h3>
+                <p className="mt-2 text-sm text-white/70">
+                  The app highlights the detected event name, date, time, and location so you can tweak anything before saving.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-xl font-bold">3</div>
+                <h3 className="mt-4 text-xl font-semibold">Save or share instantly</h3>
+                <p className="mt-2 text-sm text-white/70">
+                  Add to Apple Calendar with one tap or share to your favorite calendar so teammates and friends stay updated.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Use cases */}
+        <section className="w-full border-t border-white/10 py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Perfect for every kind of schedule</h2>
+              <p className="mt-4 text-lg text-white/70">
+                ShotCal keeps different parts of your life organized, whether you&apos;re planning campus life or coordinating a team.
+              </p>
+            </div>
+            <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 className="text-xl font-semibold">Students</h3>
+                <p className="mt-3 text-sm text-white/70">
+                  Turn lecture screenshots, club posters, and study group messages into events that sync with your class calendar.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 className="text-xl font-semibold">Professionals</h3>
+                <p className="mt-3 text-sm text-white/70">
+                  Collect meeting invites, conference schedules, and team off-sites straight from Slack, email, or PDFs.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 className="text-xl font-semibold">Families</h3>
+                <p className="mt-3 text-sm text-white/70">
+                  Keep track of school announcements, sports practices, birthdays, and neighborhood happenings without typing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="w-full border-t border-white/10 bg-black/60 py-12 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Frequently asked questions</h2>
+              <p className="mt-4 text-lg text-white/70">
+                Everything you need to know before you start saving events with ShotCal.
+              </p>
+            </div>
+            <div className="mx-auto mt-12 max-w-4xl space-y-4">
+              <details className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <summary className="cursor-pointer text-left text-lg font-semibold">How does ShotCal turn a screenshot into a calendar event?</summary>
+                <p className="mt-3 text-sm text-white/70">
+                  ShotCal uses on-device AI to understand your screenshot, detect all event details, and suggest a complete calendar entry you
+                  can save or edit in seconds.
+                </p>
+              </details>
+              <details className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <summary className="cursor-pointer text-left text-lg font-semibold">Which calendars does ShotCal work with?</summary>
+                <p className="mt-3 text-sm text-white/70">
+                  You can save events to Apple Calendar instantly and share the same details to Google Calendar, Outlook, and any other
+                  calendar apps installed on your iPhone.
+                </p>
+              </details>
+              <details className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <summary className="cursor-pointer text-left text-lg font-semibold">Is my data private when I use ShotCal?</summary>
+                <p className="mt-3 text-sm text-white/70">
+                  Yes. All processing happens locally on your phone. ShotCal never uploads your screenshots or event information to external
+                  servers.
+                </p>
+              </details>
+              <details className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <summary className="cursor-pointer text-left text-lg font-semibold">Does ShotCal work with text or only images?</summary>
+                <p className="mt-3 text-sm text-white/70">
+                  ShotCal handles both. Paste copied text or import images - the app extracts the same event essentials automatically.
+                </p>
+              </details>
+            </div>
+            <div className="mt-12 text-center">
+              <Link
+                href={appStoreUrl}
+                className="inline-flex items-center justify-center rounded-full border border-white bg-white px-6 py-3 text-base font-semibold text-black transition hover:bg-white/90"
+              >
+                Download ShotCal on the App Store
+              </Link>
+              <p className="mt-3 text-sm text-white/60">Requires iOS 17 or later - Free with optional upgrades</p>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
