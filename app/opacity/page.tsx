@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Sliders, Sparkles, Image as ImageIcon, Zap, Download, Smartphone } from "lucide-react"
+import { Sliders, Eye, Zap, Download, Smartphone, Images, Film, Palette, Sparkles, Clock, Lock, Camera, Video, Star } from "lucide-react"
 import type { Metadata } from 'next'
 import WaterfallGallery from "./components/WaterfallGallery"
 
@@ -144,7 +144,7 @@ export default function OpacityLandingPage() {
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <span className="text-2xl">📸</span>
+                    <Images className="w-6 h-6 text-violet-300" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Batch Edit Everything</h3>
@@ -154,7 +154,7 @@ export default function OpacityLandingPage() {
 
                 <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <span className="text-2xl">🎬</span>
+                    <Film className="w-6 h-6 text-violet-300" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Cinematic Presets</h3>
@@ -164,7 +164,7 @@ export default function OpacityLandingPage() {
 
                 <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <span className="text-2xl">🎨</span>
+                    <Palette className="w-6 h-6 text-violet-300" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Import Custom LUTs</h3>
@@ -174,7 +174,7 @@ export default function OpacityLandingPage() {
 
                 <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <span className="text-2xl">✨</span>
+                    <Sparkles className="w-6 h-6 text-violet-300" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Film Emulation Effects</h3>
@@ -216,7 +216,7 @@ export default function OpacityLandingPage() {
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
-                      <span className="text-2xl">📱</span>
+                      <Video className="w-5 h-5 text-violet-300" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Edit Photos & Videos Together</h3>
@@ -228,7 +228,7 @@ export default function OpacityLandingPage() {
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
-                      <span className="text-2xl">⚡</span>
+                      <Clock className="w-5 h-5 text-violet-300" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Saves Hours of Time</h3>
@@ -240,7 +240,7 @@ export default function OpacityLandingPage() {
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
-                      <span className="text-2xl">👁️</span>
+                      <Eye className="w-5 h-5 text-violet-300" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Real-Time Preview</h3>
@@ -252,7 +252,7 @@ export default function OpacityLandingPage() {
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
-                      <span className="text-2xl">🔒</span>
+                      <Lock className="w-5 h-5 text-violet-300" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Non-Destructive Editing</h3>
@@ -269,17 +269,29 @@ export default function OpacityLandingPage() {
                 <h3 className="text-xl font-bold mb-6 text-center">Perfect for</h3>
                 <div className="grid gap-4 md:grid-cols-3 text-center">
                   <div>
-                    <div className="text-3xl mb-2">📷</div>
+                    <div className="flex justify-center mb-3">
+                      <div className="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                        <Camera className="w-6 h-6 text-violet-300" />
+                      </div>
+                    </div>
                     <div className="font-semibold mb-1">Photographers</div>
                     <p className="text-sm text-white/70">Travel shoots, portraits, full galleries</p>
                   </div>
                   <div>
-                    <div className="text-3xl mb-2">🎥</div>
+                    <div className="flex justify-center mb-3">
+                      <div className="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                        <Video className="w-6 h-6 text-violet-300" />
+                      </div>
+                    </div>
                     <div className="font-semibold mb-1">Filmmakers</div>
                     <p className="text-sm text-white/70">Cinematic edits, video sequences, reels</p>
                   </div>
                   <div>
-                    <div className="text-3xl mb-2">✨</div>
+                    <div className="flex justify-center mb-3">
+                      <div className="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                        <Star className="w-6 h-6 text-violet-300" />
+                      </div>
+                    </div>
                     <div className="font-semibold mb-1">Content Creators</div>
                     <p className="text-sm text-white/70">Social media, consistent branding, batch posts</p>
                   </div>
