@@ -47,6 +47,17 @@ const apps: AppData[] = [
       secondary: "purple-500/20",
       accent: "purple-300"
     }
+  },
+  {
+    name: "Opacity",
+    description: "Batch edit entire albums at once with cinematic presets, custom LUTs, and film effects",
+    icon: "/opacity_app_icon.png",
+    link: "/opacity",
+    colorScheme: {
+      primary: "violet",
+      secondary: "violet-500/20",
+      accent: "violet-300"
+    }
   }
 ];
 
