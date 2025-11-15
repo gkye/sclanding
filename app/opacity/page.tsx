@@ -4,14 +4,14 @@ import { Sliders, Sparkles, Image as ImageIcon, Zap, Download, Smartphone } from
 import type { Metadata } from 'next'
 import WaterfallGallery from "./components/WaterfallGallery"
 
-const description = 'Transform your photos with real-time filter adjustments. Control brightness, temperature, saturation, and contrast with precision.'
+const description = 'The fastest way to edit your entire photo album at once. Apply cinematic color grades, import LUTs, add film effects, and batch-export photos and videos with one streamlined workflow.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lauperlabs.com'),
-  title: 'Opacity – Photo Filter & Adjustment App for iOS',
+  title: 'Opacity – Batch Photo & Video Editor with LUTs for iOS',
   description,
   keywords: [
-    'Opacity', 'photo editor', 'filter app iOS', 'brightness', 'contrast', 'saturation', 'temperature', 'photo filters', 'image adjustment', 'iPhone photo editor'
+    'Opacity', 'batch photo editor', 'batch video editor', 'LUT editor iOS', 'cinematic presets', 'color grading app', 'film effects', 'halation', 'film grain', 'batch export', 'photo album editor', 'video color grading'
   ],
   authors: [{ name: 'Lauper Labs' }],
   creator: 'Lauper Labs',
@@ -23,19 +23,19 @@ export const metadata: Metadata = {
     apple: '/opacity_app_icon.svg',
   },
   openGraph: {
-    title: 'Opacity – Photo Filter & Adjustment App for iOS',
+    title: 'Opacity – Batch Photo & Video Editor with LUTs for iOS',
     description,
     url: 'https://lauperlabs.com/opacity',
     siteName: 'Opacity',
     locale: 'en_US',
     type: 'website',
     images: [
-      { url: '/opacity_screenshot.svg', width: 1200, height: 630, alt: 'Opacity – iOS Photo Filter App' },
+      { url: '/opacity_screenshot.svg', width: 1200, height: 630, alt: 'Opacity – Batch Photo & Video Editor' },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Opacity – Photo Filter & Adjustment App for iOS',
+    title: 'Opacity – Batch Photo & Video Editor with LUTs for iOS',
     description,
     images: ['/opacity_screenshot.svg'],
     creator: '@lauperlabs',
@@ -103,11 +103,11 @@ export default function OpacityLandingPage() {
             {/* Title Section */}
             <div className="mx-auto max-w-5xl text-center mb-12">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                <span className="text-white">Adjust.</span>
+                <span className="text-white">Edit your entire album.</span>
                 <br />
-                <span className="bg-gradient-to-r from-violet-200 via-purple-300 to-violet-200 bg-clip-text text-transparent">Filter. Perfect.</span>
+                <span className="bg-gradient-to-r from-violet-200 via-purple-300 to-violet-200 bg-clip-text text-transparent">In one go.</span>
               </h1>
-              <p className="mt-3 text-lg md:text-xl text-white/80">Real-time photo adjustments with precision control over brightness, temperature, saturation, and contrast.</p>
+              <p className="mt-3 text-lg md:text-xl text-white/80">Apply cinematic color grades, import LUTs, add film effects, and batch-export photos and videos with one streamlined workflow.</p>
             </div>
 
             {/* Split Layout: Screenshot Left, Waterfall Right */}
@@ -139,36 +139,56 @@ export default function OpacityLandingPage() {
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 border-t border-white/10">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-5xl space-y-12">
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-center">Powerful photo adjustments at your fingertips</h2>
+              <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-center">Why creators choose Opacity</h2>
 
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                    <span className="text-2xl">📸</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Batch Edit Everything</h3>
+                    <p className="text-sm text-white/70">Select dozens of photos or videos and apply adjustments instantly across your entire set for consistent color and mood</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                    <span className="text-2xl">🎬</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Cinematic Presets</h3>
+                    <p className="text-sm text-white/70">Premium, film-inspired looks designed for photographers, filmmakers, and creators. Perfect for travel edits, vintage tones, and moody portraits</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                    <span className="text-2xl">🎨</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Import Custom LUTs</h3>
+                    <p className="text-sm text-white/70">Use industry-standard .cube LUTs from your favorite creators and apply them across multiple images and videos at once</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
+                    <span className="text-2xl">✨</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Film Emulation Effects</h3>
+                    <p className="text-sm text-white/70">Halation glow for real film-stock feel, adjustable film grain, and bloom for cinematic highlight roll-off</p>
+                  </div>
+                </div>
+
                 <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
                     <Sliders className="w-6 h-6 text-violet-300" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">Precision Controls</h3>
-                    <p className="text-sm text-white/70">Fine-tune brightness, contrast, saturation, and temperature with intuitive sliders</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <Sparkles className="w-6 h-6 text-violet-300" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Real-Time Preview</h3>
-                    <p className="text-sm text-white/70">See your changes instantly as you adjust filters for perfect results</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <ImageIcon className="w-6 h-6 text-violet-300" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Non-Destructive Editing</h3>
-                    <p className="text-sm text-white/70">Your original photos are always preserved and safe</p>
+                    <h3 className="font-semibold text-lg mb-2">Pro Color Grading</h3>
+                    <p className="text-sm text-white/70">Exposure, contrast, highlights, shadows, white balance, temperature, saturation, color mix, split tone, and luminance control</p>
                   </div>
                 </div>
 
@@ -177,28 +197,8 @@ export default function OpacityLandingPage() {
                     <Zap className="w-6 h-6 text-violet-300" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">Lightning Fast</h3>
-                    <p className="text-sm text-white/70">Optimized performance for smooth, lag-free editing experience</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <Download className="w-6 h-6 text-violet-300" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">Easy Export</h3>
-                    <p className="text-sm text-white/70">Save and share your enhanced photos in high quality</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center text-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center">
-                    <Smartphone className="w-6 h-6 text-violet-300" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">iPhone Optimized</h3>
-                    <p className="text-sm text-white/70">Designed specifically for iOS with native performance</p>
+                    <h3 className="font-semibold text-lg mb-2">Fast Batch Export</h3>
+                    <p className="text-sm text-white/70">Export dozens of photos and multiple videos at once with high-quality output ready for social platforms</p>
                   </div>
                 </div>
               </div>
@@ -206,45 +206,21 @@ export default function OpacityLandingPage() {
           </div>
         </section>
 
-        {/* Key Adjustments Section */}
+        {/* Workflow Section */}
         <section className="w-full py-12 md:py-16 bg-white/[0.02] border-t border-white/10">
           <div className="container px-4 md:px-6">
-            <div className="mx-auto max-w-4xl">
-              <h2 className="text-2xl font-bold tracking-tight md:text-3xl text-center mb-8">Complete control over every aspect</h2>
+            <div className="mx-auto max-w-5xl">
+              <h2 className="text-2xl font-bold tracking-tight md:text-3xl text-center mb-8">Complete workflow in one app</h2>
 
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
-                      <span className="text-2xl">☀️</span>
+                      <span className="text-2xl">📱</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Brightness</h3>
-                      <p className="text-sm text-white/70">Make your photos lighter or darker with precise control over exposure levels</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
-                      <span className="text-2xl">🌡️</span>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Temperature</h3>
-                      <p className="text-sm text-white/70">Adjust color temperature from cool blues to warm oranges for the perfect mood</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
-                      <span className="text-2xl">🎨</span>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Saturation</h3>
-                      <p className="text-sm text-white/70">Control color intensity from vibrant and bold to subtle and muted</p>
+                      <h3 className="font-semibold text-lg mb-2">Edit Photos & Videos Together</h3>
+                      <p className="text-sm text-white/70">Grade mixed media in the same session. Use the same presets, LUTs, and grading tools across all formats</p>
                     </div>
                   </div>
                 </div>
@@ -255,9 +231,57 @@ export default function OpacityLandingPage() {
                       <span className="text-2xl">⚡</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Contrast</h3>
-                      <p className="text-sm text-white/70">Enhance the difference between lights and darks for more dynamic photos</p>
+                      <h3 className="font-semibold text-lg mb-2">Saves Hours of Time</h3>
+                      <p className="text-sm text-white/70">Skip repetitive one-by-one editing. Ideal for large albums and full shoots with consistent aesthetic across all content</p>
                     </div>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
+                      <span className="text-2xl">👁️</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Real-Time Preview</h3>
+                      <p className="text-sm text-white/70">See your changes instantly across your entire album as you adjust presets and color grades</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mt-1">
+                      <span className="text-2xl">🔒</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Non-Destructive Editing</h3>
+                      <p className="text-sm text-white/70">Your original photos and videos are always preserved. Experiment freely and revert anytime</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional feature highlights */}
+            <div className="mx-auto max-w-4xl mt-12">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+                <h3 className="text-xl font-bold mb-6 text-center">Perfect for</h3>
+                <div className="grid gap-4 md:grid-cols-3 text-center">
+                  <div>
+                    <div className="text-3xl mb-2">📷</div>
+                    <div className="font-semibold mb-1">Photographers</div>
+                    <p className="text-sm text-white/70">Travel shoots, portraits, full galleries</p>
+                  </div>
+                  <div>
+                    <div className="text-3xl mb-2">🎥</div>
+                    <div className="font-semibold mb-1">Filmmakers</div>
+                    <p className="text-sm text-white/70">Cinematic edits, video sequences, reels</p>
+                  </div>
+                  <div>
+                    <div className="text-3xl mb-2">✨</div>
+                    <div className="font-semibold mb-1">Content Creators</div>
+                    <p className="text-sm text-white/70">Social media, consistent branding, batch posts</p>
                   </div>
                 </div>
               </div>
@@ -269,8 +293,8 @@ export default function OpacityLandingPage() {
         <section className="w-full py-12 md:py-20 border-t border-white/10">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-center space-y-6">
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Ready to perfect your photos?</h2>
-              <p className="text-lg text-white/70">Download Opacity today and start creating stunning images with professional-grade adjustments.</p>
+              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Stop editing one photo at a time</h2>
+              <p className="text-lg text-white/70">Download Opacity and transform your entire album with cinematic grades, custom LUTs, and film effects—all in one powerful batch workflow.</p>
               <div className="flex justify-center">
                 <Link href="https://apps.apple.com/us/app/opacity" className="inline-flex items-center justify-center">
                   <Image src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200" alt="Download on the App Store" width={200} height={80} className="h-[60px] w-auto" />
