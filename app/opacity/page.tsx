@@ -2,7 +2,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { Sliders, Eye, Zap, Download, Smartphone, Images, Film, Palette, Sparkles, Clock, Lock, Camera, Video, Star } from "lucide-react"
 import type { Metadata } from 'next'
-import WaterfallGallery from "./components/WaterfallGallery"
 
 const description = 'The fastest way to edit your entire photo album at once. Apply cinematic color grades, import LUTs, add film effects, and batch-export photos and videos with one streamlined workflow.'
 
@@ -110,7 +109,7 @@ export default function OpacityLandingPage() {
               <p className="mt-3 text-lg md:text-xl text-white/80">Apply cinematic color grades, import LUTs, add film effects, and batch-export photos and videos with one streamlined workflow.</p>
             </div>
 
-            {/* Split Layout: Screenshot Left, Waterfall Right */}
+            {/* Split Layout: Screenshot Left, Horizontal Gallery Right */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Left: Main Screenshot */}
               <div className="flex items-center justify-center">
@@ -121,9 +120,20 @@ export default function OpacityLandingPage() {
                 </div>
               </div>
 
-              {/* Right: Waterfall Gallery with Auto-scroll and Filters */}
-              <div className="relative h-[600px] rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
-                <WaterfallGallery />
+              {/* Right: Horizontal Screenshot Gallery */}
+              <div className="flex items-center justify-center">
+                <div className="grid grid-cols-2 gap-3 w-full max-w-md">
+                  {[1, 2, 3, 4].map((num) => (
+                    <div key={num} className="relative aspect-[9/19.5] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] ring-1 ring-white/10 shadow-lg">
+                      <Image
+                        src={`/Group ${num}.jpg`}
+                        alt={`Opacity screenshot ${num}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
