@@ -10,20 +10,55 @@ const newYork = localFont({
   display: 'swap',
 })
 
-const description = 'The fastest way to edit your entire photo album at once. Apply cinematic color grades, import LUTs, add film effects, and batch-export photos and videos with one streamlined workflow.'
+const description = 'The fastest way to edit your entire photo album at once. Apply cinematic color grades, import LUTs, add film effects, and batch-export photos and videos with one streamlined workflow. Whether you\'re editing travel shots, portraits, reels, or a full gallery, Opacity turns complex edits into a fast, powerful batch process.'
+
+const appStoreUrl = 'https://apps.apple.com/us/app/opacity'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lauperlabs.com'),
-  title: 'Opacity – Batch Photo & Video Editor with LUTs for iOS',
+  title: 'Opacity – Batch Photo & Video Editor with LUTs for iOS | Cinematic Color Grading',
   description,
   keywords: [
-    'Opacity', 'batch photo editor', 'batch video editor', 'LUT editor iOS', 'cinematic presets', 'color grading app', 'film effects', 'halation', 'film grain', 'batch export', 'photo album editor', 'video color grading'
+    'Opacity',
+    'batch photo editor',
+    'batch video editor',
+    'LUT editor iOS',
+    'cinematic presets',
+    'color grading app',
+    'film effects',
+    'halation effect',
+    'film grain app',
+    'batch export photos',
+    'photo album editor',
+    'video color grading',
+    'cube LUT',
+    'mobile color grading',
+    'batch photo processing',
+    'cinematic color grading',
+    'film emulation',
+    'photo editor for photographers',
+    'video editor for filmmakers',
+    'content creator tools',
+    'bulk photo editor',
+    'professional photo editing',
+    'iPhone photo editor',
+    'iOS video editor',
+    'non-destructive editing',
+    'preset filters',
+    'travel photography editor',
+    'portrait photo editor',
+    'social media content editor'
   ],
+  alternates: {
+    canonical: 'https://lauperlabs.com/opacity',
+  },
   authors: [{ name: 'Lauper Labs' }],
   creator: 'Lauper Labs',
   publisher: 'Lauper Labs',
   applicationName: 'Opacity',
+  generator: 'Opacity',
   category: 'Photo & Video',
+  classification: 'Photo & Video Editing App',
   icons: {
     icon: '/opacity_app_icon.svg',
     apple: '/opacity_app_icon.svg',
@@ -36,7 +71,18 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     images: [
-      { url: '/opacity_screenshot.jpg', width: 1200, height: 630, alt: 'Opacity – Batch Photo & Video Editor' },
+      {
+        url: '/opacity_screenshot.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Opacity – Batch Photo & Video Editor with Cinematic Presets and LUTs',
+      },
+      {
+        url: '/opacity_app_icon.svg',
+        width: 512,
+        height: 512,
+        alt: 'Opacity App Icon',
+      },
     ],
   },
   twitter: {
@@ -58,11 +104,117 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  appLinks: {
+    ios: {
+      url: appStoreUrl,
+      app_store_id: 'opacity',
+    },
+  },
 }
 
 export default function OpacityLandingPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    name: "Opacity",
+    description,
+    applicationCategory: "https://schema.org/MultimediaApplication",
+    operatingSystem: "iOS",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      ratingCount: "1",
+    },
+    author: {
+      "@type": "Organization",
+      name: "Lauper Labs",
+      url: "https://lauperlabs.com",
+    },
+    datePublished: "2025-11-15",
+    softwareVersion: "1.0",
+    screenshot: "https://lauperlabs.com/opacity_screenshot.jpg",
+    featureList: [
+      "Batch edit photos and videos",
+      "Advanced cinematic presets",
+      "Import and apply custom .cube LUTs",
+      "Halation, bloom, and film grain effects",
+      "Precision color grading tools",
+      "Real-time preview",
+      "Edit mixed media simultaneously",
+      "Fast batch exporting",
+      "Non-destructive editing",
+      "Professional exposure and contrast controls",
+      "White balance and temperature adjustment",
+      "Saturation, color mix, and split tone",
+      "Midtones and luminance control",
+    ],
+    keywords: "batch photo editor, LUT editor, cinematic presets, film effects, color grading, photo batch processing, video editor, halation, film grain",
+  }
+
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is Opacity?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Opacity is a batch photo and video editor for iOS that lets you edit your entire album at once. Apply cinematic color grades, import LUTs, add film effects, and batch-export all your photos and videos with one streamlined workflow.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I edit photos and videos together in Opacity?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! Opacity allows you to grade mixed media in the same session. You can use the same presets, LUTs, and grading tools across all formats, making it perfect for maintaining a consistent aesthetic.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are LUTs and can I import my own?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "LUTs (Look-Up Tables) are color grading presets that transform the look of your images and videos. Opacity supports industry-standard .cube LUTs, allowing you to import and apply LUTs from your favorite creators across multiple images and videos simultaneously.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does Opacity support batch exporting?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! Opacity features fast batch exporting that allows you to export dozens of photos and multiple videos at once with high-quality output ready for social platforms, sharing, or cloud storage.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Opacity editing non-destructive?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, Opacity uses non-destructive editing which means your original photos and videos are always preserved and safe. You can experiment freely and revert changes at any time.",
+        },
+      },
+    ],
+  }
+
   return (
     <div className={`flex min-h-screen flex-col bg-black text-white ${newYork.variable}`}>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-black/80 backdrop-blur-md supports-[backdrop-filter]:bg-black/60">
         <div className="container flex h-14 items-center justify-between">
