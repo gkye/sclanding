@@ -4,12 +4,15 @@ import { Brain, Camera, Upload, FolderOpen, Sparkles, Calendar, MapPin } from "l
 import type { Metadata } from "next"
 import AnimatedHero from "./components/AnimatedHero"
 
+const baseUrl = "https://lauperlabs.com"
+const heroScreenshotUrl = `${baseUrl}/shotCal_screenshot.png`
+const heroIconUrl = `${baseUrl}/shot_cal_app_icon.png`
 const description =
   "ShotCal is the AI screenshot-to-calendar app for iPhone that extracts dates, times, and locations from invites, flyers, and texts to build perfect events in seconds."
 const appStoreUrl = "https://apps.apple.com/us/app/shotcal-screenshot-to-event/id6747011235"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lauperlabs.com"),
+  metadataBase: new URL(baseUrl),
   title: "ShotCal - Transform Screenshots into Calendar Events Instantly",
   description,
   keywords: [
@@ -51,13 +54,13 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/shotCal_screenshot.png",
+        url: heroScreenshotUrl,
         width: 600,
         height: 800,
         alt: "ShotCal App Screenshot - Transform screenshots into calendar events",
       },
       {
-        url: "/shot_cal_app_icon.png",
+        url: heroIconUrl,
         width: 512,
         height: 512,
         alt: "ShotCal App Icon",
@@ -68,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ShotCal - Transform Screenshots into Calendar Events Instantly",
     description,
-    images: ["/shotCal_screenshot.png"],
+    images: [heroScreenshotUrl],
     creator: "@lauperlabs",
     site: "@lauperlabs",
   },
@@ -102,7 +105,7 @@ export default function ShotCalLandingPage() {
     browserRequirements: "Requires iPhone",
     url: "https://lauperlabs.com/shotcal",
     downloadUrl: appStoreUrl,
-    image: "https://lauperlabs.com/shotCal_screenshot.png",
+    image: heroScreenshotUrl,
     offers: {
       "@type": "Offer",
       price: "0.00",
@@ -120,7 +123,7 @@ export default function ShotCalLandingPage() {
       "@type": "Organization",
       name: "Lauper Labs",
       url: "https://lauperlabs.com",
-      logo: "https://lauperlabs.com/shot_cal_app_icon.png",
+      logo: heroIconUrl,
     },
   }
 
@@ -204,7 +207,7 @@ export default function ShotCalLandingPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/grain.jpg?height=1080&width=1920"
-              alt="Background"
+              alt="ShotCal abstract background texture"
               fill
               className="object-cover opacity-20"
               priority
@@ -224,7 +227,7 @@ export default function ShotCalLandingPage() {
                   <div className="absolute inset-0"></div>
                   <Image
                     src="/shotCal_screenshot.png?height=800&width=600"
-                    alt="App screenshot"
+                    alt="ShotCal screenshot showing AI event extraction"
                     fill
                     className="object-cover"
                   />
