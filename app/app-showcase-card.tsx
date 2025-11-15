@@ -47,6 +47,17 @@ const apps: AppData[] = [
       secondary: "purple-500/20",
       accent: "purple-300"
     }
+  },
+  {
+    name: "Opacity",
+    description: "Photo filter app with real-time brightness, temperature, saturation, and contrast adjustments",
+    icon: "/opacity_app_icon.svg",
+    link: "/opacity",
+    colorScheme: {
+      primary: "violet",
+      secondary: "violet-500/20",
+      accent: "violet-300"
+    }
   }
 ];
 
