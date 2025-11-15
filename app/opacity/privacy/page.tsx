@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: 'Privacy Policy - Opacity',
   description: 'Privacy policy for Opacity - Photo Filter & Adjustment App for iOS',
   icons: {
-    icon: '/opacity_app_icon.svg',
-    apple: '/opacity_app_icon.svg',
+    icon: '/opacity_app_icon.png',
+    apple: '/opacity_app_icon.png',
   },
 }
 
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <div className="container flex h-16 items-center justify-between">
           <Link href="/opacity" className="flex items-center gap-2">
             <Image
-              src="/opacity_app_icon.svg"
+              src="/opacity_app_icon.png"
               alt="Opacity Icon"
               width={32}
               height={32}
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-2">
             <Image
-              src="/opacity_app_icon.svg"
+              src="/opacity_app_icon.png"
               alt="Opacity Icon"
               width={24}
               height={24}

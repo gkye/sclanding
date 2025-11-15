@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   category: 'Photo & Video',
   classification: 'Photo & Video Editing App',
   icons: {
-    icon: '/opacity_app_icon.svg',
-    apple: '/opacity_app_icon.svg',
+    icon: '/opacity_app_icon.png',
+    apple: '/opacity_app_icon.png',
   },
   openGraph: {
     title: 'Opacity – Batch Photo & Video Editor with LUTs for iOS',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
         alt: 'Opacity – Batch Photo & Video Editor with Cinematic Presets and LUTs',
       },
       {
-        url: '/opacity_app_icon.svg',
+        url: '/opacity_app_icon.png',
         width: 512,
         height: 512,
         alt: 'Opacity App Icon',
@@ -220,7 +220,7 @@ export default function OpacityLandingPage() {
         <div className="container flex h-14 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/opacity_app_icon.svg"
+              src="/opacity_app_icon.png"
               alt="Opacity Icon"
               width={28}
               height={28}
@@ -488,7 +488,7 @@ export default function OpacityLandingPage() {
       <footer className="w-full border-t border-white/5 py-8">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-2">
-            <Image src="/opacity_app_icon.svg" alt="Opacity Icon" width={20} height={20} className="h-5 w-5 rounded-md overflow-hidden opacity-60" />
+            <Image src="/opacity_app_icon.png" alt="Opacity Icon" width={20} height={20} className="h-5 w-5 rounded-md overflow-hidden opacity-60" />
             <p className="text-xs font-light text-white/40">© {new Date().getFullYear()} Opacity. All rights reserved.</p>
           </div>
           <nav className="flex gap-6">

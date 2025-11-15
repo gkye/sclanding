@@ -51,7 +51,7 @@ const apps: AppData[] = [
   {
     name: "Opacity",
     description: "Batch edit entire albums at once with cinematic presets, custom LUTs, and film effects",
-    icon: "/opacity_app_icon.svg",
+    icon: "/opacity_app_icon.png",
     link: "/opacity",
     colorScheme: {
       primary: "violet",
