@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     images: [
-      { url: '/opacity_screenshot.svg', width: 1200, height: 630, alt: 'Opacity – Batch Photo & Video Editor' },
+      { url: '/opacity_screenshot.jpg', width: 1200, height: 630, alt: 'Opacity – Batch Photo & Video Editor' },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Opacity – Batch Photo & Video Editor with LUTs for iOS',
     description,
-    images: ['/opacity_screenshot.svg'],
+    images: ['/opacity_screenshot.jpg'],
     creator: '@lauperlabs',
     site: '@lauperlabs',
   },
@@ -116,7 +116,7 @@ export default function OpacityLandingPage() {
               <div className="flex items-center justify-center">
                 <div className="relative w-full max-w-sm">
                   <div className="relative mx-auto aspect-[9/19.5] w-full max-w-[320px] overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] ring-1 ring-white/10 shadow-[0_10px_40px_-20px_rgba(168,85,247,0.45)]">
-                    <Image src="/opacity_screenshot.svg" alt="Opacity app screenshot" fill className="object-cover" />
+                    <Image src="/opacity_screenshot.jpg" alt="Opacity app screenshot" fill className="object-cover" />
                   </div>
                 </div>
               </div>
