@@ -12,7 +12,7 @@ const newYork = localFont({
 
 const description = 'The fastest way to edit your entire photo album at once. Apply cinematic color grades, import LUTs, add film effects, and batch-export photos and videos with one streamlined workflow. Whether you\'re editing travel shots, portraits, reels, or a full gallery, Opacity turns complex edits into a fast, powerful batch process.'
 
-const appStoreUrl = 'https://apps.apple.com/us/app/opacity'
+const appStoreUrl = 'https://apps.apple.com/us/app/opacity-batch-edit-photo-album/id6752228569'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lauperlabs.com'),
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
   appLinks: {
     ios: {
       url: appStoreUrl,
-      app_store_id: 'opacity',
+      app_store_id: '6752228569',
     },
   },
 }
