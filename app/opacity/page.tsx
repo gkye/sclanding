@@ -232,7 +232,7 @@ export default function OpacityLandingPage() {
           <nav className="hidden md:flex gap-8"></nav>
 
           <div className="flex items-center gap-2">
-            <Link href="https://apps.apple.com/us/app/opacity">
+            <Link href="https://apps.apple.com/us/app/opacity-batch-edit-photo-album/id6752228569">
               <Image
                 src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=40&width=200"
                 alt="Download on the App Store"
@@ -294,7 +294,7 @@ export default function OpacityLandingPage() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <Link href="https://apps.apple.com/us/app/opacity" className="inline-flex items-center justify-center">
+              <Link href="https://apps.apple.com/us/app/opacity-batch-edit-photo-album/id6752228569" className="inline-flex items-center justify-center">
                 <Image src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200" alt="Download on the App Store" width={160} height={48} className="h-[48px] w-auto" />
               </Link>
             </div>
@@ -474,7 +474,7 @@ export default function OpacityLandingPage() {
               <h2 className="font-[var(--font-newyork)] text-3xl font-light tracking-tight md:text-4xl text-white/90">Stop editing one photo at a time</h2>
               <p className="text-base text-white/50 font-light">Download Opacity and transform your entire album with cinematic grades, custom LUTs, and film effects.</p>
               <div className="flex justify-center pt-2">
-                <Link href="https://apps.apple.com/us/app/opacity" className="inline-flex items-center justify-center">
+                <Link href="https://apps.apple.com/us/app/opacity-batch-edit-photo-album/id6752228569" className="inline-flex items-center justify-center">
                   <Image src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg?height=80&width=200" alt="Download on the App Store" width={160} height={48} className="h-[48px] w-auto" />
                 </Link>
               </div>
