@@ -13,7 +13,7 @@ declare global {
   }
 }
 
-const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID
+const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1198370492487431"
 
 export default function MetaAdsRedirect({ appStoreUrl }: MetaAdsRedirectProps) {
   useEffect(() => {
