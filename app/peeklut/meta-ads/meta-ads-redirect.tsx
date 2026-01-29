@@ -26,35 +26,6 @@ export default function MetaAdsRedirect({ appStoreUrl }: MetaAdsRedirectProps) {
       return () => window.clearTimeout(fallbackTimeout)
     }
 
-    if (!window.fbq) {
-      ;(function (f: Window, b: Document, e: string, v: string) {
-        let n: (...args: unknown[]) => void
-        let t: HTMLScriptElement
-        let s: HTMLScriptElement
-
-        if (f.fbq) return
-        n = function (...args: unknown[]) {
-          if (n.callMethod) {
-            n.callMethod(...args)
-          } else {
-            n.queue.push(args)
-          }
-        } as (...args: unknown[]) => void
-
-        n.push = n
-        n.loaded = true
-        n.version = "2.0"
-        n.queue = []
-        t = b.createElement(e)
-        t.async = true
-        t.src = v
-        s = b.getElementsByTagName(e)[0]
-        s.parentNode?.insertBefore(t, s)
-        f.fbq = n
-        f._fbq = n
-      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js")
-    }
-
     window.fbq?.("init", pixelId)
     window.fbq?.("track", "PageView")
     window.fbq?.("track", "Lead", {
