@@ -26,8 +26,6 @@ export default function MetaAdsRedirect({ appStoreUrl }: MetaAdsRedirectProps) {
       return () => window.clearTimeout(fallbackTimeout)
     }
 
-    window.fbq?.("init", pixelId)
-    window.fbq?.("track", "PageView")
     window.fbq?.("track", "Lead", {
       source: "meta-ads",
       product: "PeekLUT",

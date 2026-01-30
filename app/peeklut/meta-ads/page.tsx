@@ -5,6 +5,8 @@ import MetaAdsRedirect from "./meta-ads-redirect"
 
 const appStoreUrl =
   "https://apps.apple.com/app/apple-store/id6473661560?pt=127888120&ct=Meta_AD_1&mt=8"
+const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1228467055287081"
+
 const metaPixelSnippet = `!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -13,10 +15,10 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1228467055287081');
+fbq('init', '${pixelId}');
 fbq('track', 'PageView');`
 const metaPixelNoscript = `<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1228467055287081&ev=PageView&noscript=1"/>`
+src="https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1"/>`
 
 export const metadata: Metadata = {
   title: "PeekLUT – App Store Redirect",
