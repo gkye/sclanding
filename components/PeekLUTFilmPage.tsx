@@ -201,8 +201,8 @@ export default function PeekLUTFilmPage() {
           </div>
 
           <nav className="hidden md:flex items-center gap-8 text-[11px] tracking-[.18em] uppercase font-semibold opacity-45">
-            <a href="#programme" className="hover:opacity-100 transition-opacity">The Programme</a>
-            <a href="#palette"   className="hover:opacity-100 transition-opacity">The Palette</a>
+            <a href="#featuring" className="hover:opacity-100 transition-opacity">Featuring</a>
+            <a href="#technical-specs" className="hover:opacity-100 transition-opacity">Technical Specifications</a>
           </nav>
 
           <Link href="https://apps.apple.com/us/app/color-grade-video-peeklut/id6473661560?ppid=b90399d4-838d-4963-ae56-6b2ae5112476">
@@ -355,7 +355,7 @@ export default function PeekLUTFilmPage() {
       <div className="mx-auto max-w-3xl px-6 py-3"><Rule /></div>
 
       {/* ─────────── TECHNICAL SPECS ─────────── */}
-      <section className="py-20 md:py-28 bg-[var(--paper)]">
+      <section id="technical-specs" className="py-20 md:py-28 bg-[var(--paper)]">
         <div className="mx-auto max-w-5xl px-6">
           
           <div className="text-center mb-16">
