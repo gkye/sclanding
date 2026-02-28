@@ -27,6 +27,15 @@ export default function PrivacyPage() {
             />
             <span className="text-xl font-bold">PeekLUT</span>
           </Link>
+          <Link href="https://apps.apple.com/us/app/color-grade-video-peeklut/id6473661560?ppid=b90399d4-838d-4963-ae56-6b2ae5112476">
+            <Image
+              src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+              alt="Download on the App Store"
+              width={120}
+              height={40}
+              className="h-10 w-auto invert"
+            />
+          </Link>
         </div>
       </header>
 
