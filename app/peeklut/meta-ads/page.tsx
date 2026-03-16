@@ -4,7 +4,7 @@ import Script from "next/script"
 import MetaAdsRedirect from "./meta-ads-redirect"
 
 const appStoreUrl =
-  "https://apps.apple.com/app/apple-store/id6473661560?pt=127888120&ct=Meta_AD_1&mt=8"
+  "https://apps.apple.com/us/app/color-grade-video-peeklut/id6473661560?ppid=b90399d4-838d-4963-ae56-6b2ae5112476"
 const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "1228467055287081"
 
 const metaPixelSnippet = `!function(f,b,e,v,n,t,s)
