@@ -58,6 +58,17 @@ const apps: AppData[] = [
       secondary: "violet-500/20",
       accent: "violet-300"
     }
+  },
+  {
+    name: "StemLab",
+    description: "AI stem separator for iOS — split any song into vocals, drums, bass, guitar, piano. On-device.",
+    icon: "/stemlab_app_icon.png",
+    link: "/stemlab",
+    colorScheme: {
+      primary: "emerald",
+      secondary: "emerald-500/20",
+      accent: "emerald-300"
+    }
   }
 ];
 

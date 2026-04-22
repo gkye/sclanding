@@ -67,6 +67,9 @@ export default function LandingPage() {
             <Link href="/peeklut" className="text-lg font-bold text-white/120 hover:text-white">
               Download PeekLUT
             </Link>
+            <Link href="/stemlab" className="text-lg font-bold text-white/120 hover:text-white">
+              Download StemLab
+            </Link>
           </nav>
         </div>
       </header>

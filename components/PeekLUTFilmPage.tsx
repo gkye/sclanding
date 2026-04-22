@@ -192,12 +192,12 @@ export default function PeekLUTFilmPage() {
       {/* ───────────────── NAV ───────────────── */}
       <header style={{ borderBottom: '1px solid var(--faint)' }} className="sticky top-0 z-40 backdrop-blur-sm" >
         <div
-          className="mx-auto max-w-5xl px-6 flex items-center justify-between"
+          className="mx-auto max-w-5xl px-4 md:px-6 flex items-center justify-between gap-3"
           style={{ height: 56 }}
         >
-          <div className="flex items-center gap-2.5">
-            <Image src="/peeklut_app_icon.png" alt="PeekLUT" width={26} height={26} className="rounded-md" />
-            <span className="wa-display text-lg font-semibold">PeekLUT</span>
+          <div className="flex items-center gap-2.5 flex-shrink-0 min-w-0">
+            <Image src="/peeklut_app_icon.png" alt="PeekLUT" width={26} height={26} className="rounded-md flex-shrink-0" />
+            <span className="wa-display text-lg font-semibold whitespace-nowrap">PeekLUT</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-8 text-[11px] tracking-[.18em] uppercase font-semibold opacity-45">
@@ -205,12 +205,12 @@ export default function PeekLUTFilmPage() {
             <a href="#technical-specs" className="hover:opacity-100 transition-opacity">Technical Specifications</a>
           </nav>
 
-          <Link href="https://apps.apple.com/us/app/color-grade-video-peeklut/id6473661560?ppid=b90399d4-838d-4963-ae56-6b2ae5112476">
+          <Link href="https://apps.apple.com/us/app/color-grade-video-peeklut/id6473661560?ppid=b90399d4-838d-4963-ae56-6b2ae5112476" className="flex-shrink-0">
             <Image
               src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
               alt="Download on the App Store"
               width={110} height={36}
-              className="h-[30px] w-auto opacity-80 hover:opacity-100 transition-opacity"
+              className="h-7 w-auto md:h-[30px] opacity-80 hover:opacity-100 transition-opacity"
             />
           </Link>
         </div>
