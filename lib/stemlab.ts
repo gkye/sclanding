@@ -1,7 +1,7 @@
-// StemLab launch constants — single swap point for the real App Store URL.
-// TODO: swap APP_STORE_URL + APP_STORE_ID on launch day.
-export const APP_STORE_URL = "#"
-export const APP_STORE_ID = ""
+// StemLab launch constants.
+export const APP_STORE_URL: string =
+  "https://apps.apple.com/us/app/stemlab-vocal-remover-stems/id6762580115"
+export const APP_STORE_ID: string = "6762580115"
 
 export const IS_APP_STORE_LIVE = APP_STORE_URL !== "#"
 
