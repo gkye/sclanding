@@ -1,0 +1,57 @@
+import type { Metadata } from "next"
+import Script from "next/script"
+
+import MetaAdsRedirect from "./meta-ads-redirect"
+
+const appStoreUrl =
+  "https://apps.apple.com/app/apple-store/id6762580115?pt=127888120&ct=meta-ads&mt=8"
+// TODO: set NEXT_PUBLIC_STEMLAB_META_PIXEL_ID once the StemLab pixel is created.
+const pixelId = process.env.NEXT_PUBLIC_STEMLAB_META_PIXEL_ID ?? ""
+
+const metaPixelSnippet = pixelId
+  ? `!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${pixelId}');
+fbq('track', 'PageView');`
+  : ""
+const metaPixelNoscript = pixelId
+  ? `<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1"/>`
+  : ""
+
+export const metadata: Metadata = {
+  title: "StemLab – App Store Redirect",
+  description: "Redirecting to the StemLab App Store listing.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
+
+export default function StemLabMetaAdsRedirectPage() {
+  return (
+    <>
+      {pixelId && (
+        <>
+          <Script
+            id="stemlab-meta-ads-pixel"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: metaPixelSnippet }}
+          />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: metaPixelNoscript,
+            }}
+          />
+        </>
+      )}
+      <MetaAdsRedirect appStoreUrl={appStoreUrl} />
+    </>
+  )
+}
