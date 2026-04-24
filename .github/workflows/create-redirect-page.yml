@@ -1,0 +1,46 @@
+name: Create redirect page
+
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        description: 'Relative path for the redirect page (e.g. "go/contact")'
+        required: true
+      destination:
+        description: 'Destination URL to redirect to'
+        required: true
+      commit_message:
+        description: 'Optional commit message override'
+        required: false
+        default: 'Add redirect page'
+
+permissions:
+  contents: write
+
+jobs:
+  create-redirect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Create redirect page
+        run: node scripts/create-redirect-page.mjs --path "${{ inputs.path }}" --to "${{ inputs.destination }}"
+
+      - name: Commit redirect page
+        run: |
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public
+          git commit -m "${{ inputs.commit_message }}"
+          git push
