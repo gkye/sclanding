@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 
-const appStoreUrl = "https://apps.apple.com/app/id6763905856"
+const appStoreUrl =
+  "https://apps.apple.com/app/apple-store/id6473661560?pt=127888120&ct=main-app&mt=8"
 
 export const metadata: Metadata = {
   title: "View Info on the App Store",
