@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import CloudflareAnalytics from '@/components/CloudflareAnalytics'
 
 export default function RootLayout({
   children,
@@ -13,6 +14,7 @@ export default function RootLayout({
       <body>
         {children}
         <GoogleAnalytics />
+        <CloudflareAnalytics />
       </body>
     </html>
   )
