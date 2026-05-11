@@ -20,7 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/stemlab", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/stemlab/privacy", priority: 0.3, changeFrequency: "yearly" as const },
     { path: "/stemlab/terms", priority: 0.3, changeFrequency: "yearly" as const },
-    // /stemlab/meta-ads is intentionally omitted (ad-landing redirect, noindex)
+    // /stemlab/meta-ads and /stemlab/google-ads are intentionally omitted
+    // (ad-landing redirects, noindex)
   ]
   return routes.map(({ path, priority, changeFrequency }) => ({
     url: `${SITE}${path}`,
