@@ -24,6 +24,24 @@ const STEMS: Stem[] = [
   { id: "otr", label: "OTR", full: "Other",  color: "oklch(0.75 0.02 270)" },
 ]
 
+const FAQS = [
+  {
+    question: "What stems can StemLab separate?",
+    answer:
+      "StemLab can separate a song into vocals, drums, bass, guitar, piano, and other stems. You can choose 4-stem or 6-stem separation depending on the source track and workflow.",
+  },
+  {
+    question: "Does StemLab upload my songs?",
+    answer:
+      "No. StemLab runs separation, mixing, effects, and rendering on your iPhone, so your audio does not need to be uploaded to a cloud server.",
+  },
+  {
+    question: "What file formats does StemLab support?",
+    answer:
+      "StemLab imports common audio and video files including MP3, WAV, FLAC, M4A, MP4, and MOV up to 500 MB, and exports stems or mixdowns as WAV, FLAC, or M4A.",
+  },
+]
+
 /* ──────────────────────────────────────────────
    DETERMINISTIC WAVEFORM GEN — stable across SSR/CSR
    ────────────────────────────────────────────── */
@@ -1273,6 +1291,28 @@ export default function StemLabLandingPage() {
           All separation, mixing, and rendering runs locally on your iPhone using Apple-silicon ML. No cloud. No account. No uploads. Your audio is yours.
         </p>
         <Link href="/stemlab/privacy">Read the privacy policy →</Link>
+      </section>
+
+      {/* ─── FAQ ─── */}
+      <section id="faq" className="stemlab-section">
+        <header style={{ marginBottom: 32 }}>
+          <span className="mono eyebrow">§ FAQ</span>
+          <h2 className="display" style={{ fontSize: "clamp(2rem, 6vw, 3.2rem)", fontWeight: 800, margin: "8px 0 0", textTransform: "uppercase" }}>
+            Common questions.
+          </h2>
+        </header>
+        <div className="stemlab-pillars">
+          {FAQS.map((faq, index) => (
+            <Pillar
+              key={faq.question}
+              num={String(index + 1).padStart(2, "0")}
+              kicker="ANSWER"
+              title={faq.question}
+              body={faq.answer}
+              spec="STEMLAB FAQ"
+            />
+          ))}
+        </div>
       </section>
 
       {/* ─── FINAL CTA ─── */}

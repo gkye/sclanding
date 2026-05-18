@@ -2,11 +2,48 @@ import Link from "next/link"
 import ManifestoCard from "./app-showcase-card"
 import type { Metadata } from 'next'
 
-const description = 'We make apps.'
+const siteUrl = "https://lauperlabs.com"
+const description =
+  "Lauper Labs is an independent iOS app studio building focused creative and productivity tools: PeekLUT, Opacity, ShotCal, StemLab, and ShutterCraft."
+
+const apps = [
+  {
+    name: "PeekLUT",
+    url: `${siteUrl}/peeklut`,
+    description: "Photo and video color grading with LUTs, film emulation, masks, and .cube LUT export.",
+  },
+  {
+    name: "Opacity",
+    url: `${siteUrl}/opacity`,
+    description: "Batch photo and video editing for iPhone with LUTs, cinematic presets, and fast export.",
+  },
+  {
+    name: "ShotCal",
+    url: `${siteUrl}/shotcal`,
+    description: "AI screenshot-to-calendar conversion for iPhone events, flyers, invites, and messages.",
+  },
+  {
+    name: "StemLab",
+    url: `${siteUrl}/stemlab`,
+    description: "On-device AI stem separation for vocals, drums, bass, guitar, piano, and other stems.",
+  },
+  {
+    name: "ShutterCraft",
+    url: `${siteUrl}/shuttercraft`,
+    description: "Professional iPhone video recording with planned timelines, focus peaking, LUTs, and exposure tools.",
+  },
+]
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Lauper Labs',
   description: description,
+  alternates: {
+    canonical: siteUrl,
+  },
+  authors: [{ name: "Lauper Labs" }],
+  creator: "Lauper Labs",
+  publisher: "Lauper Labs",
   generator: 'Lauper Site',
   icons: {
     icon: [
@@ -40,8 +77,44 @@ export const metadata: Metadata = {
 
 
 export default function LandingPage() {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Lauper Labs",
+      url: siteUrl,
+      logo: `${siteUrl}/favicon_lauper.png`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Lauper Labs iOS apps",
+      itemListElement: apps.map((app, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "SoftwareApplication",
+          name: app.name,
+          operatingSystem: "iOS",
+          url: app.url,
+          description: app.description,
+          author: {
+            "@type": "Organization",
+            name: "Lauper Labs",
+            url: siteUrl,
+          },
+        },
+      })),
+    },
+  ]
+
   return (
-    <div className="flex min-h-screen flex-col bg-black text-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="flex min-h-screen flex-col bg-black text-white">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
         <div className="container flex h-16 items-center justify-between">
@@ -77,6 +150,7 @@ export default function LandingPage() {
       <main className="flex-1 flex items-center justify-center container py-12">
         <ManifestoCard />
       </main>
-    </div>
+      </div>
+    </>
   )
 }

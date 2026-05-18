@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import PeekLUTFilmPage from "@/components/PeekLUTFilmPage"
 
+const baseUrl = 'https://lauperlabs.com'
+const pageUrl = `${baseUrl}/peeklut`
+const appStoreUrl = 'https://apps.apple.com/us/app/color-grade-video-peeklut/id6473661560'
 const description = 'Professional color grading for iPhone. Edit photos & videos with LUTs, film emulation, halation, and grain. Export custom .cube LUTs for DaVinci Resolve & Premiere.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lauperlabs.com'),
+  metadataBase: new URL(baseUrl),
   title: 'PeekLUT – Photo & Video LUT Editor for iOS',
   description,
   keywords: [
@@ -16,6 +19,9 @@ export const metadata: Metadata = {
   publisher: 'Lauper Labs',
   applicationName: 'PeekLUT',
   category: 'Video',
+  alternates: {
+    canonical: pageUrl,
+  },
   icons: {
     icon: '/peeklut_app_icon.png',
     apple: '/peeklut_app_icon.png',
@@ -23,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'PeekLUT – Photo & Video LUT Editor for iOS',
     description,
-    url: 'https://lauperlabs.com/peeklut',
+    url: pageUrl,
     siteName: 'PeekLUT',
     locale: 'en_US',
     type: 'website',
@@ -50,6 +56,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  appLinks: {
+    ios: {
+      url: appStoreUrl,
+      app_store_id: '6473661560',
+    },
+  },
 }
 
 export default function PeekLUTLandingPage() {
@@ -59,24 +71,64 @@ export default function PeekLUTLandingPage() {
     name: 'PeekLUT',
     operatingSystem: 'iOS',
     applicationCategory: 'PhotoVideoApplication',
+    url: pageUrl,
+    downloadUrl: appStoreUrl,
+    image: `${baseUrl}/peeklut_app_icon.png`,
+    inLanguage: 'en-US',
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
     },
     description: description,
+    featureList: [
+      'Import and preview .cube LUTs on iPhone',
+      'Edit photos and videos with the same color grading workflow',
+      'Build film looks with grain, halation, bloom, and color controls',
+      'Use linear and radial masks for selective adjustments',
+      'Export a finished look as a .cube LUT for desktop editors',
+    ],
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
       ratingCount: '346',
     },
-    image: 'https://lauperlabs.com/peeklut_app_icon.png',
-    url: 'https://lauperlabs.com/peeklut',
     author: {
       '@type': 'Organization',
       name: 'Lauper Labs',
-      url: 'https://lauperlabs.com',
+      url: baseUrl,
     },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is PeekLUT?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'PeekLUT is an iPhone photo and video color grading app for importing LUTs, building film looks, applying masks, and exporting finished grades as .cube LUT files.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can PeekLUT export LUTs for desktop editors?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. PeekLUT can convert your adjustments into .cube LUT files that can be used in editors such as DaVinci Resolve and Adobe Premiere Pro.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does PeekLUT work with photos and videos?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. PeekLUT supports both photo and video editing, with real-time preview, LUT stacking, film effects, masks, and export controls.',
+        },
+      },
+    ],
   }
 
   return (
@@ -84,6 +136,10 @@ export default function PeekLUTLandingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PeekLUTFilmPage />
     </>

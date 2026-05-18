@@ -3,9 +3,9 @@ import type { MetadataRoute } from "next"
 export const dynamic = "force-static"
 
 const SITE = "https://lauperlabs.com"
+const LAST_MODIFIED = new Date("2026-05-16")
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
   const routes = [
     { path: "/", priority: 1.0, changeFrequency: "monthly" as const },
     { path: "/peeklut", priority: 0.9, changeFrequency: "monthly" as const },
@@ -20,12 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/stemlab", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/stemlab/privacy", priority: 0.3, changeFrequency: "yearly" as const },
     { path: "/stemlab/terms", priority: 0.3, changeFrequency: "yearly" as const },
+    { path: "/shuttercraft", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/shuttercraft/privacy", priority: 0.3, changeFrequency: "yearly" as const },
     // /stemlab/meta-ads and /stemlab/google-ads are intentionally omitted
     // (ad-landing redirects, noindex)
   ]
   return routes.map(({ path, priority, changeFrequency }) => ({
     url: `${SITE}${path}`,
-    lastModified: now,
+    lastModified: LAST_MODIFIED,
     changeFrequency,
     priority,
   }))

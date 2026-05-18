@@ -3,11 +3,22 @@ import Image from "next/image"
 import { Circle, CalendarClock, Move, ScanSearch, Palette, Grid, Film, AlertTriangle } from "lucide-react"
 import type { Metadata } from 'next'
 
-const description = 'Plan, create, and record professional-quality video on your iPhone with ShutterCraft. Features timeline planning, stabilization, focus peaking, LUTs, and more.'
+const baseUrl = 'https://lauperlabs.com'
+const pageUrl = `${baseUrl}/shuttercraft`
+const description = 'Plan, create, and record professional-quality video on your iPhone with ShutterCraft. Features timeline planning, stabilization, focus peaking, LUT previews, composition grids, and exposure tools.'
 
 export const metadata: Metadata = {
-  title: 'Shutter Craft',
+  metadataBase: new URL(baseUrl),
+  title: 'ShutterCraft – Pro iPhone Video Recording',
   description: description,
+  alternates: {
+    canonical: pageUrl,
+  },
+  authors: [{ name: 'Lauper Labs' }],
+  creator: 'Lauper Labs',
+  publisher: 'Lauper Labs',
+  applicationName: 'ShutterCraft',
+  category: 'Photo & Video',
   generator: 'Shutter Craft Generator',
   icons: {
     icon: [
@@ -21,22 +32,72 @@ export const metadata: Metadata = {
    openGraph: {
     title: 'ShutterCraft - Pro iPhone Video Recording',
     description: description,
-    url: 'https://lauperlabs.com',
+    url: pageUrl,
     siteName: 'ShutterCraft',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/screenshot1.png',
+        width: 600,
+        height: 800,
+        alt: 'ShutterCraft iPhone video recording interface',
+      },
+    ],
   },
   // Add Twitter card tags
   twitter: {
     card: 'summary_large_image',
     title: 'ShutterCraft - Pro iPhone Video Recording',
     description: description,
+    images: ['/screenshot1.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
 export default function LandingPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'MobileApplication',
+    name: 'ShutterCraft',
+    description,
+    applicationCategory: 'https://schema.org/MultimediaApplication',
+    operatingSystem: 'iOS',
+    url: pageUrl,
+    image: `${baseUrl}/screenshot1.png`,
+    inLanguage: 'en-US',
+    featureList: [
+      'Timeline planning for repeatable shots',
+      'Manual focus, exposure, zoom, and white balance workflows',
+      'Advanced video stabilization',
+      'Focus peaking and zebra exposure tools',
+      'Real-time LUT previews while recording',
+      'Composition grids for framing shots',
+      '4K 60fps recording support',
+    ],
+    author: {
+      '@type': 'Organization',
+      name: 'Lauper Labs',
+      url: baseUrl,
+    },
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
         <div className="container flex h-16 items-center justify-between">

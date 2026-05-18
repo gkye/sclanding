@@ -66,6 +66,24 @@ const filters = [
   },
 ]
 
+const faqs = [
+  {
+    question: "What is PeekLUT?",
+    answer:
+      "PeekLUT is an iPhone photo and video color grading app for importing LUTs, building film looks, applying masks, and exporting finished grades as .cube LUT files.",
+  },
+  {
+    question: "Can PeekLUT export LUTs for desktop editors?",
+    answer:
+      "Yes. PeekLUT can convert your adjustments into .cube LUT files that can be used in editors such as DaVinci Resolve and Adobe Premiere Pro.",
+  },
+  {
+    question: "Does PeekLUT work with photos and videos?",
+    answer:
+      "Yes. PeekLUT supports both photo and video editing, with real-time preview, LUT stacking, film effects, masks, and export controls.",
+  },
+]
+
 /* ──────────────────────────────────────────────
    MOOD → ACCENT COLOUR MAP  (warm WA palette)
    ────────────────────────────────────────────── */
@@ -454,6 +472,25 @@ export default function PeekLUTFilmPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────── FAQ ─────────── */}
+      <section id="faq" className="py-20 md:py-24 bg-[var(--paper)] border-y border-[var(--faint)]">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="text-center mb-12">
+            <span className="text-[9px] tracking-[.38em] uppercase font-semibold opacity-35 block mb-3">Field Notes</span>
+            <h2 className="wa-display text-3xl md:text-4xl font-bold tracking-tight">Frequently Asked Questions</h2>
+          </div>
+
+          <div className="space-y-8">
+            {faqs.map((faq) => (
+              <section key={faq.question} className="border-t border-[var(--faint)] pt-6">
+                <h3 className="wa-display text-xl font-bold mb-3 opacity-80">{faq.question}</h3>
+                <p className="text-sm leading-relaxed opacity-60">{faq.answer}</p>
+              </section>
+            ))}
           </div>
         </div>
       </section>
