@@ -1,10 +1,13 @@
 import Script from 'next/script'
 
+const googleAnalyticsId = 'G-WXXCHZWL33'
+const googleAdsId = 'AW-18133503942'
+
 export default function GoogleAnalytics() {
   return (
     <>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-WXXCHZWL33"
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -12,7 +15,8 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-WXXCHZWL33');
+          gtag('config', '${googleAnalyticsId}');
+          gtag('config', '${googleAdsId}');
         `}
       </Script>
     </>
